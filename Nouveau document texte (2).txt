@@ -1,0 +1,66 @@
+algorithm phrase
+ var
+   phrase:string;
+   i:integer;
+   J=0:integer;
+   f=0:integer;
+BEGIN
+
+  repeat
+   read(phrase)
+   until(phrase[phrase.length]==".")
+
+for(i=0,i<phrase.length-1,i++)
+do
+
+if(phrase[i]==" ")then
+j=j+1;
+END IF
+
+if(phrase[i]=="a" or phrase[i]=="e" or phrase[i]=="y" or phrase[i]=="i" or
+phrase[i]=="o" or phrase[i]=="u")then
+f=f+1;
+END IF
+
+END FOR
+write("il ya dans cette phrase" j "mots");
+write("il ya dans cette phrase" f "voyelle");
+
+END
+------------------------------------------------------------------------
+algorithme ditinc(tab1,tab2)
+  var 
+    elemen:array OF INTEGER[];
+    i,j,somme=0,k=0:integer;
+
+BEGIN
+for(i=0,i<tab1.length,i++)do
+    for(j=0,j<tab2.length,j++)do
+         if(tab1[i]=tab2[j])then
+             compt++;
+          END if
+     END FOR;
+END FOR;
+   if(compt=0)then
+     somme =somme +tab1[i];
+    element[k]=tab1[i];
+     k++;
+     compt=0;
+    END if;
+
+for(j=0,j<tab2.length,j++)do
+    for(i=0,i<tab1.length,i++)do
+         if(tab2[j]=tab1[i])then
+             compt++;
+          END if
+     END FOR;
+END FOR;
+   if(compt=0)then
+     somme =somme +tab2[j];
+    element[k]=tab1[j];
+     k++;
+     compt=0;
+    END if;
+whrite(somme);
+whrite("element distincts" );
+END
